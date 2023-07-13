@@ -23,5 +23,13 @@ public class Hien_thi_cac_loai_hinh {
             }
             System.out.println();
         }
+        System.out.print("Nhập chiều cao của tam giác ");
+        int chieucao2 = Integer.parseInt(sc.nextLine());
+        for (int i = chieucao2; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(" *");
+            }
+            System.out.println();
+        }
     }
 }

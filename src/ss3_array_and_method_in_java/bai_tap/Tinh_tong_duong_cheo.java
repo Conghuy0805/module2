@@ -32,3 +32,4 @@ public class Tinh_tong_duong_cheo {
         System.out.print("Tổng đường chéo chính của ma trận vuông = " + sum);
     }
 }
+

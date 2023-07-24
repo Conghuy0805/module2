@@ -1,4 +1,4 @@
-package ss4_oop_and_object.bai_tap;
+package ss4_oop_and_object.thuc_hanh;
 
 
 import java.util.Scanner;

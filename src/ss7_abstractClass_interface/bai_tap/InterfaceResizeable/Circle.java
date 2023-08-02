@@ -1,4 +1,4 @@
-package ss7_abstractClass_interface.bai_tap;
+package ss7_abstractClass_interface.bai_tap.InterfaceResizeable;
 
 public class Circle extends Area implements Resizeable {
     private double radius;
@@ -24,7 +24,8 @@ public class Circle extends Area implements Resizeable {
 
     @Override
     public void resize(double percent) {
-        System.out.println("Diện tích hình tròn sau khi tăng lên " + percent + " :");
-        System.out.println(Math.PI * Math.pow((radius + percent), 2));
+        System.out.print("Diện tích hình tròn sau khi tăng lên " + percent + " : ");
+        radius = this.getRadius() + (this.getRadius() * (percent / 100));
+        System.out.println(Math.PI * radius * radius);
     }
 }

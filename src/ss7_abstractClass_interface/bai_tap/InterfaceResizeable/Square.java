@@ -1,4 +1,7 @@
-package ss7_abstractClass_interface.bai_tap;
+package ss7_abstractClass_interface.bai_tap.InterfaceResizeable;
+
+import ss7_abstractClass_interface.bai_tap.InterfaceResizeable.Area;
+import ss7_abstractClass_interface.bai_tap.InterfaceResizeable.Resizeable;
 
 public class Square extends Area implements Resizeable {
     private double side = 1.0;
@@ -26,7 +29,8 @@ public class Square extends Area implements Resizeable {
 
     @Override
     public void resize(double percent) {
-        System.out.println("Diện tích hình vuông sau khi tăng lên " + percent + " :");
-        System.out.println(Math.pow(side + percent, 2));
+        System.out.print("Diện tích hình vuông sau khi tăng lên " + percent + " :");
+        side = this.getSide() + (this.getSide() * (percent / 100));
+        System.out.println(side * side);
     }
 }

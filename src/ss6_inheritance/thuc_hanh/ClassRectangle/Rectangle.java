@@ -4,20 +4,20 @@ import ss6_inheritance.thuc_hanh.ClassShape.Shape;
 
 public class Rectangle extends Shape {
     private double width = 1.0;
-    private double length = 1.0;
+    private double height = 1.0;
 
     public Rectangle() {
     }
 
-    public Rectangle(double width, double length) {
+    public Rectangle(double width, double height) {
         this.width = width;
-        this.length = length;
+        this.height = height;
     }
 
     public Rectangle(double width, double length, String color, boolean filled) {
         super(color, filled);
         this.width = width;
-        this.length = length;
+        this.height = height;
     }
 
     public double getWidth() {
@@ -28,20 +28,20 @@ public class Rectangle extends Shape {
         this.width = width;
     }
 
-    public double getLength() {
-        return length;
+    public double getHeight() {
+        return height;
     }
 
-    public void setLength(double length) {
-        this.length = length;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     public double getArea() {
-        return width * this.length;
+        return width * this.height;
     }
 
     public double getPerimeter() {
-        return 2 * (width + this.length);
+        return 2 * (width + this.height);
     }
 
     @Override
@@ -49,7 +49,7 @@ public class Rectangle extends Shape {
         return "A Rectangle with width="
                 + getWidth()
                 + " and length="
-                + getLength()
+                + getHeight()
                 + ", which is a subclass of "
                 + super.toString();
     }

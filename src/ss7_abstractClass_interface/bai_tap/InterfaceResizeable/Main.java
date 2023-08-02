@@ -1,4 +1,5 @@
-package ss7_abstractClass_interface.bai_tap;
+package ss7_abstractClass_interface.bai_tap.InterfaceResizeable;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -14,10 +15,12 @@ public class Main {
             } else {
                 System.out.println("\n" + "Diện tích hình vuông ban đầu:  " + ((Square) test).getArea());
             }
+
             double randomDouble = Math.random();
             randomDouble = randomDouble * 100 + 1;
             int randomInt = (int) randomDouble;
             test.resize(randomInt);
+
         }
     }
 }

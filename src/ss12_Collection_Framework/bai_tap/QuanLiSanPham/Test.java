@@ -15,7 +15,7 @@ public class Test {
             System.out.println("4. Hiển thị danh sách sản phẩm: ");
             System.out.println("5. Tìm kiếm sản phẩm theo tên: ");
             System.out.println("6. Sắp xếp sản phẩm tăng dần, giảm dần theo giá");
-            System.out.println("0. Thoát chương trình!!! ");
+            System.out.println("7. Thoát chương trình!!! ");
             System.out.println("-------------------");
             choose = sc.nextInt();
             sc.nextLine();
@@ -61,8 +61,12 @@ public class Test {
                         pr.sortDown();
                         pr.showlist();
                     }
+                    break;
+                default:
+                    System.out.println("Thoát chương trình! ");
+                    System.exit(0);
             }
-        } while (choose != 0);
+        } while (choose != 7);
 
     }
 }

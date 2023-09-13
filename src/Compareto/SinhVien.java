@@ -2,7 +2,7 @@ package Compareto;
 
 import org.jetbrains.annotations.NotNull;
 
-public class SinhVien implements Comparable<SinhVien>{
+public class SinhVien implements Comparable<SinhVien> {
     private int id;
     private String name;
     private String classes;
@@ -49,16 +49,30 @@ public class SinhVien implements Comparable<SinhVien>{
 
     @Override
     public String toString() {
-        return "SinhVien{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", classes='" + classes + '\'' +
-                ", diemTB=" + diemTB +
-                '}';
+        return "SinhVien{" + "id=" + id + ", name='" + name + '\'' + ", classes='" + classes + '\'' + ", diemTB=" + diemTB + '}';
     }
+
+    public String getTen() {
+        String s = this.name.trim();
+        if (s.indexOf(" ") >= 0) {
+            int vt = s.lastIndexOf(" ");
+            return s.substring(vt + 1);
+        }
+        return s;
+    }
+
 
     @Override
     public int compareTo(SinhVien o) {
-        return 0;
+//        Dựa trên so sánh tên
+        String tenThis = this.getTen();
+        String tenO = o.getTen();
+        return tenThis.compareTo(tenO);
+
+//        // Dựa trên so sánh điểm trung bình
+//        Integer diemThis = (int) this.getDiemTB();
+//        Integer diemO = (int) o.getDiemTB();
+//        return diemThis.compareTo(diemO);
+
     }
 }
